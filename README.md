@@ -1,7 +1,7 @@
 # FP-SISOP-D02
-## FUSE-dan-Thread
+### FUSE-dan-Thread
 
-###Soal:
+### Soal:
 Membuat sebuah music player dengan bahasa C yang memiliki fitur play nama_lagu,
 pause, next, prev, list lagu. Selain music player juga terdapat FUSE untuk 
 mengumpulkan semua jenis file yang berekstensi .mp3 kedalam FUSE yang tersebar 
@@ -12,7 +12,7 @@ musik.
 Note: playlist bisa banyak
 
 
-###Jawab:
+### Jawab:
 FUSE
 Untuk membuat FUSE berisi semua file berekstensi '.mp3' dari direktori /home/user dan subfoldernya, maka yang harus dilakukan adalah sebagai berikut.
 1) menginstal ```pytagsfs```
