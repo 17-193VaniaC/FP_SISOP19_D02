@@ -1,3 +1,5 @@
+//bismillah
+
 #include<pthread.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -65,9 +67,6 @@ int plays(char argv[])
         int channels, encoding;
         long rate;
 
-        //if(argc < 2)
-        //    exit(0);
-
         // initializations
         ao_initialize ();
         driver = ao_default_driver_id ();
@@ -94,7 +93,6 @@ int plays(char argv[])
             ao_play(dev, buffer, done);
             if(flag_stop == 1)
                 break;
-
             while (flag_pause == 1)
             {
                 printf("\r");
@@ -214,7 +212,7 @@ void* display (void *arg)
         printf("\r");
         if(tampilan_menu == 1)
         {
-            printf("-------- Fitur mp3 player --------\n");
+            printf("Fitur mp3 player:\n");
             printf("1. Tampilkan Playlist\n");
             printf("2. Mainkan lagu\n3. Tutup player\n\n");
             printf("Pilihan Anda:\n");
@@ -242,7 +240,7 @@ void* display (void *arg)
 
             if(d)
             {
-                while ((dir = readdir(d)) != NULL) //check directory for mp3
+                while ((dir = readdir(d)) != NULL) 
                 {
                     char files[100];
 
@@ -251,23 +249,23 @@ void* display (void *arg)
                     strcpy (files, dir->d_name);
                     if ((files [strlen(files)-3] == 'm') && (files [strlen(files)-2] == 'p') && (files [strlen(files)-1] == '3'))
                     {
-                        for(a = 0; a < strlen(files); a++) //scan songs
+                        for(a = 0; a < strlen(files); a++) 
                             song[b][a] = files[a];
 
-                        for(a = 0; a < strlen(files); a++) //print songs
+                        for(a = 0; a < strlen(files); a++) 
                             printf("%c", song[b][a]);
 
                         b++;
                         printf("\n");
-                    }
-                }
+               }
+              }
                 closedir(d);
             }
 
             sleep(1);
             system("clear");
         }
-    }
+}
 }
 
 void* selesai (void *arg)
