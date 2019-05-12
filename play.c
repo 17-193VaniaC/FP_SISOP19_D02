@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     buffer_size = mpg123_outblock(mh);
     buffer = (unsigned char*) malloc(buffer_size * sizeof(unsigned char));
 
-    mpg123_open(mh, argv[1]);
+    mpg123_open(mh, argv[1]);//nanti argumen musiknya masuk ke sini
     mpg123_getformat(mh, &rate, &channels, &encoding);
 
     format.bits = mpg123_encsize(encoding) * BITS;
