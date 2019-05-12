@@ -11,4 +11,12 @@ Note: playlist bisa banyak
 
 Jawab:
 FUSE
-Untuk membuat FUSE berisi semua file berekstensi '.mp3' dari direktori /home/user dan subfoldernya, maka yang harus dilakukan adalah sebagai berikut
+Untuk membuat FUSE berisi semua file berekstensi '.mp3' dari direktori /home/user dan subfoldernya, maka yang harus dilakukan adalah sebagai berikut.
+1) menginstal ```pytagsfs```
+   masukan command ``sudo apt-get install pytagsfs``. pytagsfs adalah FUSE file system yang menampilkan file berdasarkan tagnya.
+2) membuat folder baru 
+   masukan command ``mkdir musicplayer``.
+3) membuat file system
+   masukan command ``pytagsfs -o dstfilter='\.mp3$' /home/[user] /home/[user]/musicplayer``. 
+   ``dstfilter`` digunakan untuk memfilter ekstensi file yang akan ditampilkan dalam file system dan ``'\.mp3$'`` digunakan untuk  menandakan bahwa file yang akan ditampilkan berekstensi '.mp3'
+   Setelah melakukan langkah langkah tersebut, maka terbuatlah file system yang berisi file berekstensi '.mp3' pada direktori /home/user dan subfoldernya.
