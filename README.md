@@ -22,4 +22,6 @@ Untuk membuat FUSE berisi semua file berekstensi '.mp3' dari direktori /home/use
 3) membuat file system
    masukan command ``pytagsfs -o dstfilter='\.mp3$' /home/[user] /home/[user]/musicplayer``. 
    ``dstfilter`` digunakan untuk memfilter ekstensi file yang akan ditampilkan dalam file system dan ``'\.mp3$'`` digunakan untuk  menandakan bahwa file yang akan ditampilkan berekstensi '.mp3'
+   ![1](https://user-images.githubusercontent.com/42793858/57579961-2dae6680-74ce-11e9-9a82-acc4748eb515.png)
    Setelah melakukan langkah langkah tersebut, maka terbuatlah file system yang berisi file berekstensi '.mp3' pada direktori /home/user dan subfoldernya.
+   ![2](https://user-images.githubusercontent.com/42793858/57579975-4f0f5280-74ce-11e9-90ab-af0ae6b61987.png)
